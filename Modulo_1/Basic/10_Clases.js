@@ -36,6 +36,4 @@ console.log(rectangulo2.calcularArea());
 // implementar getters, setter y realizar una implementacion.
 // implementar metodos estaticos - Clase Punto, Function distancia
 // Construir clase Persona y estudiante, extender Estudiante con Persona>
-/*
-    DEBER
-*/
+

@@ -1,5 +1,6 @@
 /*
     Async - await
+    
 */
 function promesa(bandera) {
     return new Promise((resolve, reject) => {

@@ -39,21 +39,30 @@ const app = express()
 //     })
 // })
 
-const { RouterIndex } = require('./routes/index')
+// const { RouterIndex } = require('./routes/index')
 
-app.use("/", RouterIndex)
+// app.use("/", RouterIndex)
 // app.use("/user",RouterIndex)
 // app.use("/user/data",RouterIndex)
 /**
  "/" + "/" = "//" => "/"
  "/" + "/saludo" => "//saludo" => "/saludo"
  */
-app.listen(3000,() => {
-    console.log("Servidor escuchando en http://localhost:3000");
-})
+
 
 //Datos para enviar al servidor
 //query-
 //params
 
 
+//Deber
+const {RouterIndexDeber} = require("./routes/index_Deber")
+
+app.use("/", RouterIndexDeber)
+app.use("/deber-video", RouterIndexDeber)
+
+
+
+app.listen(3000,() => {
+    console.log("Servidor escuchando en http://localhost:3000");
+})

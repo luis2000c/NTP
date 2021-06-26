@@ -29,15 +29,7 @@ router
             nombre:nombre,
         })
     })
-    .get("/users",(req,res)=>{
-        res.json{
-           msg : "Lista de usuarios ",
-        
-
-        }
-        
-
-    })
+    
 
 
 //implementacion

@@ -1,18 +1,21 @@
 //creacion del router
 ///Traemos el paquete
 const { Router } = require('express');
+const { User } = require('../lib/Schemas/User');
 ///Iniciamos Router
-const data = require("./data.json")
+//const data = require("./data.json")
 const router = Router()
+//Trear Middleware
+const {DataValidator} = require("../middlewares/DataValidator")
 
 //Creacion de endpoint
 router
-    .get("/",(req,res) => {    
-        res.send("Hola Mundo")
+    .get("/", (req,res) => {    
+        res.send("Hola mundo con ExpresJs");
     })
-    .get("/saludo",(req,res)=>{
+    .get("/saludo",DataValidator("query", User), (req,res)=>{
         //req .query -accedo a todo lo que venga en el query
-        console.log(req.query);
+        //console.log(req.query);
         const {query:{nombre, apellido}} = req
         //const nombre = req.query.nombre
         //const nombre = req.query.apellido

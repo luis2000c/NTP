@@ -39,11 +39,11 @@ const app = express()
 //     })
 // })
 
-// const { RouterIndex } = require('./routes/index')
+const { RouterIndex } = require('./routes/index')
 
-// app.use("/", RouterIndex)
-// app.use("/user",RouterIndex)
-// app.use("/user/data",RouterIndex)
+app.use("/", RouterIndex)
+app.use("/user",RouterIndex)
+app.use("/user/data",RouterIndex)
 /**
  "/" + "/" = "//" => "/"
  "/" + "/saludo" => "//saludo" => "/saludo"
@@ -56,10 +56,10 @@ const app = express()
 
 
 //Deber
-const {RouterIndexDeber} = require("./routes/index_Deber")
+// const {RouterIndexDeber} = require("./routes/index_Deber")
 
-app.use("/", RouterIndexDeber)
-app.use("/deber-video", RouterIndexDeber)
+// app.use("/", RouterIndexDeber)
+// app.use("/deber-video", RouterIndexDeber)
 
 
 
